@@ -1,67 +1,79 @@
-# Carlos Martínez
+# Personal portfolio with free hosting on GitHub Pages
 
-## Software Engineer
+This repo contains the code for a simple personal portfolio website that can be hosted for free using GitHub Pages. The site is built using HTML, CSS, and JavaScript, and it fetches data from the GitHub API to display your repositories. Everything built using the O1 model of ChatGPT.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/carlos-mart%C3%ADnez-887499215/)
-[![Email](https://img.shields.io/badge/Email-dev.carlimvg02%40gmail.com-red)](mailto:dev.carlimvg02@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Website-green)](https://carlosmgv02.github.io/)
+## Steps to Host Your HTML File on GitHub Pages
+
+### 1. Create a New Repository
+
+- **Log in to GitHub** and click on the **"New"** button to create a new repository.
+- **Name the repository** `username.github.io`, replacing `username` with your GitHub username. For you, it would be `carlosmgv02.github.io`.
+- Ensure the repository is set to **Public**.
+- You can add a **README** file if you'd like, but it's not necessary.
+- Click on **"Create repository"**.
+
+### 2. Upload Your `index.html` File
+
+#### Option A: Using Git on Your Local Machine
+
+- **Clone the repository** to your local machine using Git:
+
+  ```bash
+  git clone https://github.com/carlosmgv02/carlosmgv02.github.io.git
+  ```
+
+- **Copy your `index.html` file** into the cloned repository folder.
+
+- **Commit and push** the changes:
+
+  ```bash
+  cd carlosmgv02.github.io
+  git add index.html
+  git commit -m "Add personal portfolio website"
+  git push origin main
+  ```
+
+#### Option B: Using the GitHub Web Interface
+
+- Go to your repository on GitHub.
+- Click on **"Add file"** > **"Upload files"**.
+- Drag and drop your `index.html` file.
+- Scroll down and click on **"Commit changes"**.
+
+### 3. Enable GitHub Pages
+
+- In your repository, go to **"Settings"**.
+- Click on **"Pages"** in the left sidebar.
+- Under **"Source"**, ensure that **"Deploy from a branch"** is selected.
+- Choose the **main** branch and keep the root folder (`/`).
+- Click **"Save"**.
+- After a few minutes, your site should be available at:
+
+  ```
+  https://carlosmgv02.github.io/
+  ```
+
+### 4. Access Your Website
+
+- Open a web browser and navigate to `https://carlosmgv02.github.io/` to see your portfolio live!
+
+## Additional Tips
+
+- **Custom Domain (Optional):** If you have a custom domain, you can set it up in the **"Custom domain"** section under **"Pages"** settings.
+- **Updating Your Site:** Any changes you push to the `main` branch will automatically update your live site.
+- **Assets and Resources:** Ensure that all assets (images, CSS files, scripts) referenced in your HTML are correctly linked and uploaded to the repository.
+- **API Usage:** Since your page fetches data from the GitHub API, be aware of the API rate limits, especially if your site gets a lot of traffic.
+
+## Troubleshooting
+
+- **Site Not Showing Up:** If your site doesn't appear after a few minutes, double-check that your `index.html` file is in the root of the repository and that GitHub Pages is enabled.
+- **Console Errors:** Use the browser's developer console to check for any JavaScript errors or issues with API calls.
+- **CORS Issues:** When fetching data from the GitHub API, you shouldn't run into CORS issues, but if you do, consider using a proxy or server-side code.
+
+## Useful Resources
+
+- [Official GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [GitHub Pages Quickstart Guide](https://docs.github.com/en/pages/quickstart)
+- [GitHub API Rate Limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)
 
 ---
-
-### About Me
-
-I'm a passionate software engineer who loves technology, software, and backend development. I specialize in building robust backend systems using Java, Spring Boot, and PostgreSQL. I'm currently working on projects involving Vue.js, Spring Boot, and PostgreSQL.
-
-- 🔭 **Currently working on:** Vue.js, Spring Boot & PostgreSQL projects.
-- 🌱 **Currently learning:** Big Data and Business Intelligence.
-- 👯 **Looking to collaborate on:** Java and Spring Boot projects.
-- 💬 **Ask me about:** Java, Spring Boot, Python, and backend development.
-- 📫 **How to reach me:** [LinkedIn](https://www.linkedin.com/in/carlos-mart%C3%ADnez-887499215/), [Email](mailto:dev.carlimvg02@gmail.com)
-- 🌐 **Portfolio:** [carlosmgv02.github.io](https://carlosmgv02.github.io/)
-- 📝 **Check out my:** [GitHub Gists](https://gist.github.com/carlosmgv02)
-
----
-
-### Languages and Tools
-
-<div align="center">
-  <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original-wordmark.svg" title="Spring Boot" alt="Spring Boot" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/vuejs/vuejs-original-wordmark.svg" title="Vue.js" alt="Vue.js" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" title="PostgreSQL" alt="PostgreSQL" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original-wordmark.svg" title="Redis" alt="Redis" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="50" height="50"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/aws/aws-original-wordmark.svg" title="AWS" alt="AWS" width="50" height="50"/>&nbsp;
-</div>
-
----
-
-### GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=carlosmgv02&show_icons=true&theme=radical" alt="Carlos's GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=carlosmgv02&layout=compact&hide=c,assembly,verilog&theme=radical" alt="Top Languages" />
-  <img src="http://github-readme-streak-stats.herokuapp.com?user=carlosmgv02&theme=radical&hide_border=true" alt="GitHub Streak" />
-</div>
-
----
-
-### Projects
-
-- **[Conectadrive](https://github.com/carlosmgv02/Conectadrive)**: A full-stack application built with Vue.js and Spring Boot.
-- **[Avantcab](https://github.com/carlosmgv02/Avantcab)**: An application optimized for performance with advanced caching and Docker deployment.
-- **[Personal Portfolio](https://carlosmgv02.github.io/)**: Showcases my work and experience.
-
----
-
-### Contact
-
-Feel free to reach out if you'd like to collaborate or have any questions!
-
-- 📧 **Email**: [dev.carlimvg02@gmail.com](mailto:dev.carlimvg02@gmail.com)
-- 💼 **LinkedIn**: [Carlos Martínez](https://www.linkedin.com/in/carlos-mart%C3%ADnez-887499215/)
-- 🖥️ **Portfolio**: [carlosmgv02.github.io](https://carlosmgv02.github.io/)
-
