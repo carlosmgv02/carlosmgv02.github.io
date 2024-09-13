@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carlos Martínez - Portfolio</title>
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+        color: #333;
+      }
+      .header {
+        background-color: #34495e;
+        color: #fff;
+        padding: 60px 0 100px;
+        text-align: center;
+        position: relative;
+      }
+      .header::after {
+        content: "";
+        background: #f0f2f5;
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        transform: skewY(-3deg);
+      }
+      .header img {
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 5px solid #fff;
+        position: relative;
+        z-index: 1;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 48px;
+        position: relative;
+        z-index: 1;
+      }
+      .header h2 {
+        margin: 10px 0 0;
+        font-size: 24px;
+        font-weight: normal;
+        color: #ecf0f1;
+        position: relative;
+        z-index: 1;
+      }
+      .content {
+        max-width: 1200px;
+        margin: 80px auto 40px;
+        padding: 0 20px;
+      }
+      .content section {
+        margin-bottom: 60px;
+      }
+      .content h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #34495e;
+        position: relative;
+      }
+      .content h2::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background-color: #3498db;
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+      }
+      .content p {
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 30px;
+      }
+      .links {
+        text-align: center;
+        margin: 30px 0;
+      }
+      .links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #34495e;
+        font-size: 24px;
+        transition: color 0.3s;
+      }
+      .links a:hover {
+        color: #3498db;
+      }
+      .links i {
+        margin-right: 8px;
+      }
+      .repos-section {
+        overflow-x: hidden;
+      }
+      .repos {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding-bottom: 20px;
+      }
+      .repo-card {
+        min-width: 250px;
+        max-width: 250px;
+        background-color: #fff;
+        margin-right: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .repo-card:hover {
+        transform: translateY(-10px);
+      }
+      .repo-card img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        cursor: pointer;
+      }
+      .repo-card .repo-content {
+        padding: 15px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .repo-card h3 {
+        margin: 0;
+        font-size: 20px;
+        color: #34495e;
+      }
+      .repo-card p {
+        font-size: 14px;
+        margin: 10px 0;
+        color: #7f8c8d;
+        flex-grow: 1;
+      }
+      .repo-card a {
+        text-decoration: none;
+        color: #3498db;
+        font-weight: bold;
+        margin-top: 10px;
+        align-self: flex-start;
+      }
+      .repo-card a:hover {
+        text-decoration: underline;
+      }
+      .skills,
+      .education,
+      .experience {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .skills ul,
+      .education ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .skills li,
+      .education li {
+        font-size: 18px;
+        margin: 10px 20px;
+        color: #2c3e50;
+        display: flex;
+        align-items: center;
+      }
+      .skills li i,
+      .education li i {
+        margin-right: 8px;
+        font-size: 24px;
+      }
+      /* Work Experience Section Styles */
+      .experience {
+        max-width: 1000px;
+        margin: 0 auto 60px;
+        text-align: left; /* Align text to the left */
+      }
+
+      .experience h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #34495e;
+        position: relative;
+        text-align: center; /* Keep the section title centered */
+      }
+
+      .experience h2::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background-color: #3498db;
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+      }
+
+      .experience-item {
+        margin-bottom: 40px;
+      }
+
+      .experience-item h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: #34495e;
+      }
+
+      .experience-item h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #7f8c8d;
+      }
+
+      .experience-item p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+      }
+
+      .experience-item ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .experience-item ul li {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #2c3e50;
+        line-height: 1.6;
+      }
+
+      .footer {
+        background-color: #34495e;
+        color: #fff;
+        text-align: center;
+        padding: 30px 0;
+      }
+      /* Hide scrollbar for better aesthetics */
+      .repos::-webkit-scrollbar {
+        display: none;
+      }
+      .repos {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      @media screen and (min-width: 768px) {
+        .repos {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="" alt="Profile Picture" id="profile-pic" />
+      <h1>Carlos Martínez</h1>
+      <h2>Software Engineer & Senior Java Developer</h2>
+    </div>
+    <div class="content">
+      <section>
+        <p>
+          I am a software engineer with over 4 years of experience in software
+          development. Graduated from Rovira i Virgili University and currently
+          pursuing an MBA in Big Data and Business Intelligence. Passionate
+          about creating innovative technological solutions and helping
+          companies harness the power of data.
+        </p>
+        <div class="links">
+          <a
+            href="https://www.linkedin.com/in/carlos-martínez-garcía-villarrubia-887499215/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>LinkedIn
+          </a>
+          <a href="https://github.com/carlosmgv02" target="_blank">
+            <i class="fab fa-github"></i>GitHub
+          </a>
+          <a href="mailto:dev.carlimvg02@gmail.com">
+            <i class="fas fa-envelope"></i>Email
+          </a>
+        </div>
+      </section>
+      <section class="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-item">
+          <h3>Senior Java Developer</h3>
+          <h4>PagoNxt, a Santander Company</h4>
+          <p><em>January 2024 - Present | Madrid, Spain (Remote)</em></p>
+          <ul>
+            <li>
+              Developed Java-based REST APIs using Spring Boot, Hibernate, and
+              JPA to facilitate seamless communication between front-end and
+              back-end systems.
+            </li>
+            <li>
+              Implemented Kafka for asynchronous service communication,
+              enhancing system scalability and responsiveness.
+            </li>
+            <li>
+              Utilized Elasticsearch and Kibana for fast search capabilities and
+              data visualization, aiding in decision-making.
+            </li>
+            <li>
+              Managed PostgreSQL databases for efficient data handling and
+              improved application performance.
+            </li>
+            <li>
+              Employed AKS for cloud orchestration, ensuring scalable and
+              reliable application deployments.
+            </li>
+            <li>
+              Adopted OpenSearch to advance search and analytics capabilities.
+            </li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Fullstack Software Developer</h3>
+          <h4>Conectadrive</h4>
+          <p><em>April 2023 - Present | Mallorca, Spain (Remote)</em></p>
+          <ul>
+            <li>
+              Directed project architecture and managed key milestones, aligning
+              with strategic goals.
+            </li>
+            <li>
+              Developed the frontend using Vue.js and the backend with Spring
+              Boot.
+            </li>
+            <li>
+              Implemented efficient Java REST APIs for seamless communication.
+            </li>
+            <li>
+              Engineered automated task scheduling, enhancing operational
+              efficiency.
+            </li>
+            <li>
+              Optimized PostgreSQL queries and data caching using Redis,
+              significantly boosting performance.
+            </li>
+            <li>
+              Deployed the application on AWS using ECS, API Gateway, Amplify,
+              and RDS.
+            </li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Fullstack Software Developer</h3>
+          <h4>Avantcab</h4>
+          <p><em>January 2023 - April 2023 | Mallorca, Spain (Remote)</em></p>
+          <ul>
+            <li>
+              Enhanced application performance by implementing advanced data
+              caching mechanisms.
+            </li>
+            <li>
+              Developed a user-friendly frontend with Quasar and a robust
+              backend with Spring Boot.
+            </li>
+            <li>
+              Deployed the application in a Docker container on a VPS, ensuring
+              scalability and consistency.
+            </li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Freelance Web Developer</h3>
+          <p><em>2020 - 2022 | Tarragona, Spain</em></p>
+          <ul>
+            <li>
+              Successfully created over 30 tailor-made websites focusing on
+              aesthetic design, user experience, and SEO optimization.
+            </li>
+            <li>
+              Applied advanced techniques to enhance website loading speed and
+              performance.
+            </li>
+            <li>
+              Developed efficient, secure online stores integrated with CMS and
+              payment gateways.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            <i class="fab fa-java" style="color: #007396"></i>Java (4 years)
+          </li>
+          <li>
+            <i class="fab fa-python" style="color: #3776ab"></i>Python (2 years)
+          </li>
+          <li>
+            <i class="fas fa-database" style="color: #336791"></i>PostgreSQL
+          </li>
+          <li><i class="fas fa-database" style="color: #d82c20"></i>Redis</li>
+          <li><i class="fab fa-docker" style="color: #0db7ed"></i>Docker</li>
+          <li>
+            <i class="fab fa-vuejs" style="color: #42b883"></i>Vue.js (1 year)
+          </li>
+          <li>
+            <i class="fas fa-server" style="color: #6db33f"></i>Spring Boot (3
+            years)
+          </li>
+          <li><i class="fas fa-code-branch" style="color: #f05032"></i>Git</li>
+          <li><i class="fas fa-rabbit" style="color: #ff6600"></i>RabbitMQ</li>
+          <li>
+            <i class="fab fa-js-square" style="color: #f7df1e"></i>JavaScript
+          </li>
+        </ul>
+      </section>
+      <section class="education">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <i class="fas fa-graduation-cap"></i
+            ><strong>MBA in Big Data and Business Intelligence</strong> - In
+            Progress
+          </li>
+          <li>
+            <i class="fas fa-graduation-cap"></i
+            ><strong>Bachelor's Degree in Computer Science</strong> - Rovira i
+            Virgili University (2020 - 2024)
+          </li>
+          <li>
+            <i class="fas fa-language"></i><strong>Languages: </strong> Spanish
+            (Native), Catalan (Native), English (Professional, B2 Cambridge)
+          </li>
+        </ul>
+      </section>
+      <section class="repos-section">
+        <h2>My GitHub Repositories</h2>
+        <div class="repos" id="repos"></div>
+      </section>
+    </div>
+    <div class="footer">
+      <p>&copy; 2023 Carlos Martínez</p>
+    </div>
+
+    <script>
+      const username = "carlosmgv02";
+
+      // Get and display profile picture
+      fetch(`https://api.github.com/users/${username}`)
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("profile-pic").src = data.avatar_url;
+        });
+
+      // Get and display repositories
+      fetch(`https://api.github.com/users/${username}/repos`)
+        .then((response) => response.json())
+        .then((data) => {
+          const reposContainer = document.getElementById("repos");
+
+          // Sort repositories by updated date
+          data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+          data.forEach((repo) => {
+            const repoCard = document.createElement("div");
+            repoCard.classList.add("repo-card");
+
+            // Construct the Open Graph image URL for the repository
+            const repoImageUrl = `https://opengraph.githubassets.com/1/${username}/${repo.name}`;
+
+            const repoImage = document.createElement("img");
+            repoImage.src = repoImageUrl;
+            repoImage.alt = repo.name;
+            repoImage.onclick = () => {
+              window.open(repo.html_url, "_blank");
+            };
+
+            const repoContent = document.createElement("div");
+            repoContent.classList.add("repo-content");
+
+            const repoName = document.createElement("h3");
+            repoName.textContent = repo.name;
+
+            const repoDesc = document.createElement("p");
+            repoDesc.textContent = repo.description || "No description";
+
+            const repoLink = document.createElement("a");
+            repoLink.href = repo.html_url;
+            repoLink.target = "_blank";
+            repoLink.textContent = "View Repository";
+
+            repoContent.appendChild(repoName);
+            repoContent.appendChild(repoDesc);
+            repoContent.appendChild(repoLink);
+
+            repoCard.appendChild(repoImage);
+            repoCard.appendChild(repoContent);
+
+            reposContainer.appendChild(repoCard);
+          });
+        })
+        .catch((error) => console.error("Error fetching repositories:", error));
+    </script>
+  </body>
+</html>
