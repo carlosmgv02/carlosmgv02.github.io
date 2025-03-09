@@ -1,0 +1,16 @@
+[
+    {
+        "title": "MBA in Big Data and Business Intelligence",
+        "institution": "ENEB",
+        "period": "October 2024 - Present",
+        "details": "Currently in progress, focusing on Big Data strategies and Business Intelligence.",
+        "logo": "images/ENEB.png"
+    },
+    {
+        "title": "Bachelor's Degree in Computer Science",
+        "institution": "Rovira i Virgili University",
+        "period": "2020 - 2024",
+        "details": "Specialized in software engineering and data management.",
+        "logo": "images/urv.png"
+    }
+]

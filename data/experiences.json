@@ -1,0 +1,75 @@
+[
+    {
+        "role": "Full Stack Software Developer",
+        "company": "Inditex",
+        "location": "Arteixo, Spain (Remote)",
+        "period": "October 2024 - Present",
+        "logo": "images/inditex.png",
+        "responsibilities": [
+            "Developed REST APIs using Spring Boot, integrating PostgreSQL and Redis for caching.",
+            "Deployed applications on Azure (AKS, Azure DevOps) to ensure scalable and highly available infrastructure.",
+            "Managed APIs with API Gateway, enhancing security, routing, and monitoring of services.",
+            "Performed database migrations with Flyway and Liquibase, ensuring seamless data transitions.",
+            "Implemented asynchronous messaging with Kafka, increasing system scalability and responsiveness.",
+            "Automated CI/CD pipelines using Azure DevOps, accelerating development cycles and improving software quality."
+        ],
+        "stack": "Java | Spring Boot | PostgreSQL | Redis | Azure | AKS | API Gateway | Docker | Kubernetes | CI/CD | Flyway | Liquibase | Kafka"
+    },
+    {
+        "role": "Full Stack Software Developer",
+        "company": "Conectadrive",
+        "location": "Mallorca, Spain (Remote)",
+        "period": "April 2023 - Present",
+        "logo": "images/conectadrive.png",
+        "responsibilities": [
+            "Directed the project's architecture and managed key milestones.",
+            "Developed the frontend using Vue.js and backend with Spring Boot.",
+            "Implemented efficient Java REST APIs for seamless communication.",
+            "Engineered automated scheduling of tasks, enhancing operational efficiency.",
+            "Optimized PostgreSQL queries and data caching using Redis, improving performance.",
+            "Deployed the application on AWS (ECS, API Gateway, Amplify, RDS) for a resilient infrastructure."
+        ],
+        "stack": "Java | Spring Boot | Vue.js | PostgreSQL | Redis | AWS (ECS, API Gateway, Amplify, RDS) | Hibernate | JPA | Task Scheduling"
+    },
+    {
+        "role": "Senior Java Developer",
+        "company": "PagoNxt, a Santander Company",
+        "location": "Madrid, Spain (Remote)",
+        "period": "January 2024 - Present",
+        "logo": "images/pagonxt.png",
+        "responsibilities": [
+            "Developed Java-based REST APIs with Spring Boot, Hibernate, and JPA.",
+            "Implemented Kafka for asynchronous service communication.",
+            "Utilized Elasticsearch and Kibana for search and data visualization.",
+            "Managed PostgreSQL databases for efficient data handling.",
+            "Employed AKS for cloud orchestration, ensuring scalable deployments.",
+            "Adopted OpenSearch for advanced search and analytics capabilities."
+        ],
+        "stack": "Java | Spring Boot | Hibernate | JPA | REST API | Kafka | Elasticsearch | Kibana | PostgreSQL | AKS | OpenSearch"
+    },
+    {
+        "role": "Full Stack Software Developer",
+        "company": "Avantcab",
+        "location": "Mallorca, Spain (Remote)",
+        "period": "January 2023 - April 2023",
+        "logo": "images/avantcab.png",
+        "responsibilities": [
+            "Enhanced application performance with advanced data caching.",
+            "Developed frontend using Quasar and backend with Spring Boot.",
+            "Deployed the application in a Docker container on a VPS, ensuring scalability."
+        ],
+        "stack": "Quasar | Spring Boot | Docker | VPS | Data Caching | Performance Optimization"
+    },
+    {
+        "role": "Freelance Web Developer",
+        "location": "Tarragona, Spain",
+        "period": "2020 - 2022",
+        "logo": "images/freelance.png",
+        "responsibilities": [
+            "Created over 30 tailor-made websites using WordPress and Shopify.",
+            "Optimized website loading speed and performance.",
+            "Developed secure online stores integrated with CMS and payment gateways."
+        ],
+        "stack": "WordPress | Shopify | Web Development | SEO | Performance Optimization | CMS | Payment Gateways"
+    }
+]

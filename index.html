@@ -2,631 +2,205 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Carlos Martínez - Portfolio</title>
-    <!-- Etiqueta meta viewport -->
+    <title>Carlos Martínez - Software Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awesome para Iconos -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f2f5;
-        color: #333;
-        font-size: 16px; /* Tamaño base de fuente */
-      }
-      .header {
-        background-color: #34495e;
-        color: #fff;
-        padding: 3.75rem 0 6.25rem; /* 60px y 100px en rem */
-        text-align: center;
-        position: relative;
-      }
-      .header::after {
-        content: "";
-        background: #f0f2f5;
-        width: 100%;
-        height: 6.25rem; /* 100px en rem */
-        position: absolute;
-        bottom: -3.125rem; /* -50px en rem */
-        left: 0;
-        transform: skewY(-3deg);
-      }
-      .header img {
-        border-radius: 50%;
-        width: 10rem; /* 160px en rem */
-        height: 10rem;
-        object-fit: cover;
-        margin-bottom: 1.25rem; /* 20px en rem */
-        border: 0.3125rem solid #fff; /* 5px en rem */
-        position: relative;
-        z-index: 1;
-      }
-      .header h1 {
-        margin: 0;
-        font-size: 3rem; /* Ajustado para ser más responsivo */
-        position: relative;
-        z-index: 1;
-      }
-      .header h2 {
-        margin: 0.625rem 0 0; /* 10px en rem */
-        font-size: 1.5rem; /* Ajustado para ser más responsivo */
-        font-weight: normal;
-        color: #ecf0f1;
-        position: relative;
-        z-index: 1;
-      }
-      .content {
-        max-width: 75rem; /* 1200px en rem */
-        margin: 5rem auto 2.5rem; /* 80px y 40px en rem */
-        padding: 0 1.25rem; /* 20px en rem */
-      }
-      .content section {
-        margin-bottom: 3.75rem; /* 60px en rem */
-      }
-      .content h2 {
-        font-size: 2.25rem; /* Ajustado */
-        margin-bottom: 1.875rem; /* 30px en rem */
-        text-align: center;
-        color: #34495e;
-        position: relative;
-      }
-      .content h2::after {
-        content: "";
-        width: 3.75rem; /* 60px en rem */
-        height: 0.25rem; /* 4px en rem */
-        background-color: #3498db;
-        position: absolute;
-        left: 50%;
-        bottom: -0.625rem; /* -10px en rem */
-        transform: translateX(-50%);
-      }
-      .content p {
-        font-size: 1rem; /* Ajustado */
-        line-height: 1.8;
-        text-align: center;
-        max-width: 50rem; /* 800px en rem */
-        margin: 0 auto 1.875rem; /* 30px en rem */
-      }
-      .links {
-        text-align: center;
-        margin: 1.875rem 0; /* 30px en rem */
-      }
-      .links a {
-        margin: 0 0.625rem; /* 10px en rem */
-        text-decoration: none;
-        color: #34495e;
-        font-size: 1.5rem; /* Ajustado */
-        transition: color 0.3s;
-      }
-      .links a:hover {
-        color: #3498db;
-      }
-      .links i {
-        margin-right: 0.5rem; /* 8px en rem */
-      }
-      .repos-section {
-        position: relative;
-        overflow-x: hidden;
-      }
-      .repos {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        padding-bottom: 1.25rem; /* 20px en rem */
-        padding-left: 4.375rem; /* 70px en rem */
-        padding-right: 3.125rem; /* 50px en rem */
-      }
-      .repo-card {
-        min-width: 15.625rem; /* 250px en rem */
-        max-width: 15.625rem;
-        background-color: #fff;
-        margin-right: 1.25rem; /* 20px en rem */
-        border-radius: 0.625rem; /* 10px en rem */
-        box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Ajustado */
-        flex-shrink: 0;
-        transition: transform 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .repo-card:hover {
-        transform: translateY(-0.625rem); /* 10px en rem */
-      }
-      .repo-card img {
-        width: 100%;
-        height: 8.75rem; /* 140px en rem */
-        object-fit: cover;
-        border-top-left-radius: 0.625rem; /* 10px en rem */
-        border-top-right-radius: 0.625rem;
-        cursor: pointer;
-      }
-      .repo-card .repo-content {
-        padding: 0.9375rem; /* 15px en rem */
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      .repo-card h3 {
-        margin: 0;
-        font-size: 1.125rem; /* Ajustado */
-        color: #34495e;
-      }
-      .repo-card p {
-        font-size: 0.875rem; /* Ajustado */
-        margin: 0.625rem 0; /* 10px en rem */
-        color: #7f8c8d;
-        flex-grow: 1;
-      }
-      .repo-card a {
-        text-decoration: none;
-        color: #3498db;
-        font-weight: bold;
-        margin-top: 0.625rem; /* 10px en rem */
-        align-self: flex-start;
-        font-size: 1rem; /* Ajustado */
-      }
-      .repo-card a:hover {
-        text-decoration: underline;
-      }
-      .skills,
-      .education,
-      .experience {
-        margin: 0 auto;
-        max-width: 62.5rem; /* 1000px en rem */
-      }
-      .skills ul,
-      .education ul {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .skills li,
-      .education li {
-        font-size: 1.125rem; /* Ajustado */
-        margin: 0.625rem 1.25rem; /* 10px y 20px en rem */
-        color: #2c3e50;
-        display: flex;
-        align-items: center;
-      }
-      .skills li i,
-      .education li i {
-        margin-right: 0.5rem; /* 8px en rem */
-        font-size: 1.5rem; /* Ajustado */
-      }
-      /* Estilos de la sección de Experiencia Laboral */
-      .experience {
-        max-width: 62.5rem;
-        margin: 0 auto 3.75rem;
-        text-align: left;
-      }
-
-      .experience h2 {
-        font-size: 2.25rem; /* Ajustado */
-        margin-bottom: 1.875rem;
-        color: #34495e;
-        position: relative;
-        text-align: center;
-      }
-
-      .experience h2::after {
-        content: "";
-        width: 3.75rem;
-        height: 0.25rem;
-        background-color: #3498db;
-        position: absolute;
-        left: 50%;
-        bottom: -0.625rem;
-        transform: translateX(-50%);
-      }
-
-      .experience-item {
-        margin-bottom: 2.5rem; /* 40px en rem */
-      }
-
-      .experience-item h3 {
-        font-size: 1.5rem; /* Ajustado */
-        margin-bottom: 0.3125rem; /* 5px en rem */
-        color: #34495e;
-      }
-
-      .experience-item h4 {
-        font-size: 1.25rem; /* Ajustado */
-        margin-bottom: 0.3125rem;
-        color: #7f8c8d;
-      }
-
-      .experience-item p {
-        font-size: 1rem; /* Ajustado */
-        margin-bottom: 0.625rem; /* 10px en rem */
-        color: #2c3e50;
-      }
-
-      .experience-item ul {
-        list-style-type: disc;
-        padding-left: 1.25rem; /* 20px en rem */
-      }
-
-      .experience-item ul li {
-        font-size: 1rem;
-        margin-bottom: 0.5rem; /* 8px en rem */
-        color: #2c3e50;
-        line-height: 1.6;
-      }
-
-      .footer {
-        background-color: #34495e;
-        color: #fff;
-        text-align: center;
-        padding: 1.875rem 0; /* 30px en rem */
-      }
-      /* Ocultar scrollbar para mejor estética */
-      .repos::-webkit-scrollbar {
-        display: none;
-      }
-      .repos {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      @media screen and (min-width: 48rem) {
-        /* 768px en rem */
-        .repos {
-          justify-content: flex-start;
-        }
-      }
-      /* Estilos de los botones de navegación */
-      .nav-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(52, 73, 94, 0.7);
-        border: none;
-        color: #fff;
-        padding: 0.625rem 0.9375rem; /* 10px y 15px en rem */
-        cursor: pointer;
-        border-radius: 50%;
-        font-size: 1.5rem; /* Ajustado */
-        z-index: 1;
-      }
-      .nav-button.left {
-        left: -1.25rem; /* -20px en rem */
-      }
-      .nav-button.right {
-        right: 0.625rem; /* 10px en rem */
-      }
-      .nav-button:hover {
-        background-color: rgba(52, 73, 94, 0.9);
-      }
-      /* Ajustes responsivos */
-      @media screen and (max-width: 47.9375rem) {
-        /* 767px en rem */
-        .header h1 {
-          font-size: 2rem;
-        }
-        .header h2 {
-          font-size: 1.25rem;
-        }
-        .content h2 {
-          font-size: 1.75rem;
-        }
-        .content p {
-          font-size: 0.9375rem;
-          padding: 0 0.625rem; /* 10px en rem */
-        }
-        .experience-item h3 {
-          font-size: 1.25rem;
-        }
-        .experience-item h4 {
-          font-size: 1.125rem;
-        }
-        .experience-item p,
-        .experience-item ul li {
-          font-size: 0.875rem;
-        }
-        .skills li,
-        .education li {
-          font-size: 1rem;
-        }
-        .links a {
-          font-size: 1.125rem;
-        }
-        .repo-card h3 {
-          font-size: 1rem;
-        }
-        .repo-card p {
-          font-size: 0.75rem;
-        }
-        .repo-card a {
-          font-size: 0.875rem;
-        }
-      }
-    </style>
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="header">
-      <img src="" alt="Profile Picture" id="profile-pic" />
-      <h1>Carlos Martínez</h1>
-      <h2>Software Engineer & Senior Java Developer</h2>
-    </div>
-    <div class="content">
-      <section>
-        <p>
-          I am a software engineer with over 4 years of experience in software
-          development. Graduated from Rovira i Virgili University and currently
-          pursuing an MBA in Big Data and Business Intelligence. Passionate
-          about creating innovative technological solutions and helping
-          companies harness the power of data.
+    <!-- Navbar -->
+    <nav class="main-nav">
+      <div class="nav-inner">
+        <div class="logo">Carlos Martínez</div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#repos">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero/Header -->
+    <header class="hero-section">
+      <div class="hero-wave"></div>
+      <div class="hero-content">
+        <img
+          src=""
+          alt="Profile Picture"
+          id="profile-pic"
+          class="profile-pic"
+        />
+        <h1>Carlos Martínez</h1>
+        <h2>Software Engineer & Senior Java Developer</h2>
+        <p class="contact-info">
+          <a href="mailto:jobs@carlosmgv02.com">jobs@carlosmgv02.com</a> |
+          <a href="tel:+34649438998" style="color: #fff">+34 649438998</a>
         </p>
-        <div class="links">
+        <div class="social-links">
           <a
             href="https://www.linkedin.com/in/carlos-mart%C3%ADnez-887499215/"
             target="_blank"
-          >
-            <i class="fab fa-linkedin"></i>LinkedIn
-          </a>
-          <a href="https://github.com/carlosmgv02" target="_blank">
-            <i class="fab fa-github"></i>GitHub
-          </a>
-          <a href="mailto:dev.carlimvg02@gmail.com">
-            <i class="fas fa-envelope"></i>Email
-          </a>
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/carlosmgv02"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <section id="about" class="about-section">
+        <div class="section-inner">
+          <h2>About</h2>
+          <p>
+            I am a software engineer with over 4 years of experience in software
+            development. Graduated from Rovira i Virgili University and
+            currently pursuing an MBA in Big Data and Business Intelligence.
+            Passionate about creating innovative technological solutions and
+            helping companies harness the power of data.
+          </p>
         </div>
       </section>
-      <section class="experience">
-        <h2>Work Experience</h2>
-        <div class="experience-item">
-          <h3>Senior Java Developer</h3>
-          <h4>PagoNxt, a Santander Company</h4>
-          <p><em>January 2024 - Present | Madrid, Spain (Remote)</em></p>
-          <ul>
-            <li>
-              Developed Java-based REST APIs using Spring Boot, Hibernate, and
-              JPA to facilitate seamless communication between front-end and
-              back-end systems.
-            </li>
-            <li>
-              Implemented Kafka for asynchronous service communication,
-              enhancing system scalability and responsiveness.
-            </li>
-            <li>
-              Utilized Elasticsearch and Kibana for fast search capabilities and
-              data visualization, aiding in decision-making.
-            </li>
-            <li>
-              Managed PostgreSQL databases for efficient data handling and
-              improved application performance.
-            </li>
-            <li>
-              Employed AKS for cloud orchestration, ensuring scalable and
-              reliable application deployments.
-            </li>
-            <li>
-              Adopted OpenSearch to advance search and analytics capabilities.
-            </li>
-          </ul>
+
+      <!-- Experience Timeline -->
+      <section id="experience" class="experience-section">
+        <div class="section-inner">
+          <h2>Work Experience</h2>
+          <div class="experience-timeline-container">
+            <div class="experience-timeline" id="experience-container"></div>
+          </div>
+          <div class="timeline-buttons">
+            <button class="toggle-btn" id="toggle-experience-btn">
+              Show more
+            </button>
+          </div>
         </div>
-        <div class="experience-item">
-          <h3>Fullstack Software Developer</h3>
-          <h4>Conectadrive</h4>
-          <p><em>April 2023 - Present | Mallorca, Spain (Remote)</em></p>
-          <ul>
-            <li>
-              Directed project architecture and managed key milestones, aligning
-              with strategic goals.
-            </li>
-            <li>
-              Developed the frontend using Vue.js and the backend with Spring
-              Boot.
-            </li>
-            <li>
-              Implemented efficient Java REST APIs for seamless communication.
-            </li>
-            <li>
-              Engineered automated task scheduling, enhancing operational
-              efficiency.
-            </li>
-            <li>
-              Optimized PostgreSQL queries and data caching using Redis,
-              significantly boosting performance.
-            </li>
-            <li>
-              Deployed the application on AWS using ECS, API Gateway, Amplify,
-              and RDS.
-            </li>
-          </ul>
+      </section>
+
+      <!-- Education Timeline -->
+      <section id="education" class="education-section">
+        <div class="section-inner">
+          <h2>Education</h2>
+          <div class="education-timeline-container">
+            <div class="education-timeline" id="education-container"></div>
+          </div>
         </div>
-        <div class="experience-item">
-          <h3>Fullstack Software Developer</h3>
-          <h4>Avantcab</h4>
-          <p><em>January 2023 - April 2023 | Mallorca, Spain (Remote)</em></p>
-          <ul>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="skills-section">
+        <div class="section-inner">
+          <h2>Skills</h2>
+          <ul class="skills-list">
             <li>
-              Enhanced application performance by implementing advanced data
-              caching mechanisms.
+              <i class="fab fa-java" style="color: #007396"></i>Java (4 years)
             </li>
             <li>
-              Developed a user-friendly frontend with Quasar and a robust
-              backend with Spring Boot.
+              <i class="fab fa-python" style="color: #3776ab"></i>Python (2
+              years)
             </li>
             <li>
-              Deployed the application in a Docker container on a VPS, ensuring
-              scalability and consistency.
+              <i class="fas fa-database" style="color: #336791"></i>PostgreSQL
             </li>
-          </ul>
-        </div>
-        <div class="experience-item">
-          <h3>Freelance Web Developer</h3>
-          <p><em>2020 - 2022 | Tarragona, Spain</em></p>
-          <ul>
+            <li><i class="fas fa-database" style="color: #d82c20"></i>Redis</li>
+            <li><i class="fab fa-docker" style="color: #0db7ed"></i>Docker</li>
+            <li><i class="fab fa-vuejs" style="color: #42b883"></i>Vue.js</li>
             <li>
-              Successfully created over 30 tailor-made websites focusing on
-              aesthetic design, user experience, and SEO optimization.
+              <i class="fas fa-server" style="color: #6db33f"></i>Spring Boot
             </li>
             <li>
-              Applied advanced techniques to enhance website loading speed and
-              performance.
+              <i class="fas fa-code-branch" style="color: #f05032"></i>Git
             </li>
             <li>
-              Developed efficient, secure online stores integrated with CMS and
-              payment gateways.
+              <i class="fas fa-rabbit" style="color: #ff6600"></i>RabbitMQ
             </li>
+            <li><i class="fab fa-js" style="color: #f7df1e"></i>JavaScript</li>
           </ul>
         </div>
       </section>
 
-      <section class="skills">
-        <h2>Skills</h2>
-        <!-- Contenido de habilidades permanece igual -->
-        <ul>
-          <li>
-            <i class="fab fa-java" style="color: #007396"></i>Java (4 years)
-          </li>
-          <li>
-            <i class="fab fa-python" style="color: #3776ab"></i>Python (2 years)
-          </li>
-          <li>
-            <i class="fas fa-database" style="color: #336791"></i>PostgreSQL
-          </li>
-          <li><i class="fas fa-database" style="color: #d82c20"></i>Redis</li>
-          <li><i class="fab fa-docker" style="color: #0db7ed"></i>Docker</li>
-          <li>
-            <i class="fab fa-vuejs" style="color: #42b883"></i>Vue.js (1 year)
-          </li>
-          <li>
-            <i class="fas fa-server" style="color: #6db33f"></i>Spring Boot (3
-            years)
-          </li>
-          <li><i class="fas fa-code-branch" style="color: #f05032"></i>Git</li>
-          <li><i class="fas fa-rabbit" style="color: #ff6600"></i>RabbitMQ</li>
-          <li>
-            <i class="fab fa-js-square" style="color: #f7df1e"></i>JavaScript
-          </li>
-        </ul>
+      <!-- Projects (Carousel) -->
+      <section id="repos" class="repos-section">
+        <div class="section-inner">
+          <h2>Projects</h2>
+          <div class="carousel-container">
+            <button
+              class="carousel-btn prev"
+              id="carousel-prev"
+              aria-label="Previous"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-track-container">
+              <div class="carousel-track" id="carousel-track"></div>
+            </div>
+            <button
+              class="carousel-btn next"
+              id="carousel-next"
+              aria-label="Next"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </section>
-      <section class="education">
-        <h2>Education</h2>
-        <!-- Contenido de educación permanece igual -->
-        <ul>
-          <li>
-            <i class="fas fa-graduation-cap"></i
-            ><strong>MBA in Big Data and Business Intelligence</strong> - In
-            Progress
-          </li>
-          <li>
-            <i class="fas fa-graduation-cap"></i
-            ><strong>Bachelor's Degree in Computer Science</strong> - Rovira i
-            Virgili University (2020 - 2024)
-          </li>
-          <li>
-            <i class="fas fa-language"></i><strong>Languages: </strong> Spanish
-            (Native), Catalan (Native), English (Professional, B2 Cambridge)
-          </li>
-        </ul>
-      </section>
-      <section class="repos-section">
-        <h2>My GitHub Repositories</h2>
-        <!-- Botón de navegación izquierda -->
-        <button class="nav-button left" id="nav-left" aria-label="Scroll Left">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <!-- Contenedor de repositorios -->
-        <div class="repos" id="repos"></div>
-        <!-- Botón de navegación derecha -->
-        <button
-          class="nav-button right"
-          id="nav-right"
-          aria-label="Scroll Right"
-        >
-          <i class="fas fa-chevron-right"></i>
-        </button>
+
+      <!-- Contact -->
+      <section id="contact" class="contact-section">
+        <div class="section-inner contact-inner">
+          <h2>Contact</h2>
+          <p>
+            If you would like to know more about my work or discuss a project,
+            feel free to reach out:
+          </p>
+          <p class="contact-info-footer">
+            <strong>Email:</strong>
+            <a href="mailto:jobs@carlosmgv02.com" class="contact-link"
+              >jobs@carlosmgv02.com</a
+            ><br />
+            <strong>Phone:</strong>
+            <a href="tel:+34649438998" class="contact-link">+34 649438998</a>
+          </p>
+          <div class="social-links footer-links">
+            <a
+              href="https://www.linkedin.com/in/carlos-mart%C3%ADnez-887499215/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/carlosmgv02"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
       </section>
     </div>
-    <div class="footer">
-      <p>&copy; 2024 Carlos Martínez</p>
-    </div>
 
-    <script>
-      const username = "carlosmgv02";
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>&copy; 2024 Carlos Martínez</p>
+      </div>
+    </footer>
 
-      // Obtener y mostrar la foto de perfil
-      fetch(`https://api.github.com/users/${username}`)
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById("profile-pic").src = data.avatar_url;
-        });
-
-      // Obtener y mostrar los repositorios
-      fetch(`https://api.github.com/users/${username}/repos`)
-        .then((response) => response.json())
-        .then((data) => {
-          const reposContainer = document.getElementById("repos");
-
-          // Ordenar los repositorios por fecha de actualización
-          data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-
-          data.forEach((repo) => {
-            const repoCard = document.createElement("div");
-            repoCard.classList.add("repo-card");
-
-            // Construir la URL de la imagen Open Graph del repositorio
-            const repoImageUrl = `https://opengraph.githubassets.com/1/${username}/${repo.name}`;
-
-            const repoImage = document.createElement("img");
-            repoImage.src = repoImageUrl;
-            repoImage.alt = repo.name;
-            repoImage.onclick = () => {
-              window.open(repo.html_url, "_blank");
-            };
-
-            const repoContent = document.createElement("div");
-            repoContent.classList.add("repo-content");
-
-            const repoName = document.createElement("h3");
-            repoName.textContent = repo.name;
-
-            const repoDesc = document.createElement("p");
-            repoDesc.textContent = repo.description || "No description";
-
-            const repoLink = document.createElement("a");
-            repoLink.href = repo.html_url;
-            repoLink.target = "_blank";
-            repoLink.textContent = "View Repository";
-
-            repoContent.appendChild(repoName);
-            repoContent.appendChild(repoDesc);
-            repoContent.appendChild(repoLink);
-
-            repoCard.appendChild(repoImage);
-            repoCard.appendChild(repoContent);
-
-            reposContainer.appendChild(repoCard);
-          });
-
-          // Agregar eventos a los botones de navegación
-          const navLeft = document.getElementById("nav-left");
-          const navRight = document.getElementById("nav-right");
-
-          navLeft.addEventListener("click", () => {
-            reposContainer.scrollBy({
-              left: -300,
-              behavior: "smooth",
-            });
-          });
-
-          navRight.addEventListener("click", () => {
-            reposContainer.scrollBy({
-              left: 300,
-              behavior: "smooth",
-            });
-          });
-        })
-        .catch((error) => console.error("Error fetching repositories:", error));
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
